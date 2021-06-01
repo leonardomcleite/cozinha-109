@@ -1,0 +1,50 @@
+@import './variables.scss';
+@import './fonts.scss';
+
+html, *, *::before, *::after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+.main-container {
+  height: calc(126vh - 100px);
+}
+
+#root {
+  overflow: auto;
+  height: 100vh;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background: #d8d8d8;
+    z-index: 1;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #001e50;
+    border-radius: 5px;
+  }
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
+@import './Core.scss';
+
+//Components && Pages
+@import './Toolbar.scss';
+@import './Footer.scss';
+@import './Loader.scss';
